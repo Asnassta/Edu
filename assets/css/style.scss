@@ -1620,6 +1620,11 @@ h2, .title {
 			}
 		}
 	}
+	.education {
+		&__subtitle {
+			font-size: 14px;
+		}
+	}
 	.press {
 		&-box {
 			&__title {
@@ -1630,6 +1635,19 @@ h2, .title {
 }
 
 @media(max-width: 375px) {
+	.header {
+		&-menu {
+			&__buttons {
+				a {
+					margin-right: 10px;
+				}
+			}
+		}
+		.btn {
+			padding: 12px;
+			font-size: 10px;
+		}
+	}
 	.projects {
 		&__inner {
 			margin-left: 0;

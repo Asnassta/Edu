@@ -1578,10 +1578,17 @@ h2, .title {
     padding: 12px 18px; }
   .intro-slide__item {
     padding: 100px 15px 40px 25px; }
+  .education__subtitle {
+    font-size: 14px; }
   .press-box__title {
     font-size: 14px; } }
 
 @media (max-width: 375px) {
+  .header-menu__buttons a {
+    margin-right: 10px; }
+  .header .btn {
+    padding: 12px;
+    font-size: 10px; }
   .projects__inner {
     margin-left: 0; }
     .projects__inner > * {
