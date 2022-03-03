@@ -1405,6 +1405,10 @@ h2, .title {
 @media (max-width: 860px) {
   h2, .title {
     font-size: 35px; }
+  .header-menu__lang {
+    margin-right: 20px; }
+  .header-menu__buttons {
+    margin-right: 35px; }
   .header__nav > ul li {
     margin-right: 15px; }
   .header__nav .link {

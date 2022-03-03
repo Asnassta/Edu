@@ -1358,6 +1358,14 @@ h2, .title {
 		font-size: 35px;
 	}
 	.header {
+		&-menu {
+			&__lang {
+				margin-right: 20px;
+			}
+			&__buttons {
+				margin-right: 35px;
+			}
+		}
 		&__nav {
 			>ul {
 				li {
