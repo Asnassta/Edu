@@ -228,9 +228,9 @@ h2, .title {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: calc(100% + 30px);
+  width: calc(100% + 50px);
   position: absolute;
-  top: 50%;
+  top: calc(50% - 8px);
   left: 50%;
   z-index: 5;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -239,8 +239,8 @@ h2, .title {
     display: inline-block;
     cursor: pointer; }
     .slider-arrows__arrow img {
-      width: 34px;
-      height: 33px;
+      width: 46px;
+      height: 34px;
       -o-object-fit: contain;
       object-fit: contain; }
     .slider-arrows__arrow_next {
@@ -356,7 +356,7 @@ h2, .title {
   .header-search__select {
     background-color: #f9f9f9;
     border-radius: 26px 0px 0px 26px;
-    padding: 16px 0 18px 0;
+    padding: 19px 0 17px;
     border-right: 1px solid #e1e1e1;
     /*position: relative;
 			&:after {
@@ -415,7 +415,7 @@ h2, .title {
       width: 100%;
       height: 100%;
       background-color: #fff;
-      padding: 16px 45px 18px 18px; }
+      padding: 18px 45px 18px 18px; }
       .header-search__input input::-webkit-input-placeholder {
         font-family: "Montserrat", sans-serif;
         font-size: 14px;
@@ -899,14 +899,19 @@ h2, .title {
         background: linear-gradient(90deg, #17A43B 0%, #FFCF26 100%); }
         .popular-box__like:hover svg, .popular-box__like.active svg {
           fill: #fff; }
-    .popular-box__photo img {
-      width: 100%;
-      border-radius: 10px 10px 0 0; }
+    .popular-box__photo {
+      height: 225px; }
+      .popular-box__photo img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0; }
     .popular-box__btn {
       position: relative;
       z-index: 10; }
     .popular-box__info {
-      padding: 20px 18px;
+      padding: 20px 18px 24px;
       -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto;
@@ -924,7 +929,11 @@ h2, .title {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      min-height: 16px; }
+      .popular-box__mark img {
+        width: 16px;
+        height: 16px; }
       .popular-box__mark span {
         display: inline-block;
         font-family: "Montserrat", sans-serif;
@@ -1293,6 +1302,8 @@ h2, .title {
     font-size: 28px; } }
 
 @media (max-width: 1400px) {
+  .skider-arrows {
+    width: calc(100% + 40px); }
   .intro-arrows {
     width: calc(100% - 130px); }
   .education {

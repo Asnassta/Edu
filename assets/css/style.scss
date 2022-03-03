@@ -176,9 +176,9 @@ h2, .title {
 .slider-arrows {
 	display: flex;
 	justify-content: space-between;
-	width: calc(100% + 30px);
+	width: calc(100% + 50px);
 	position: absolute;
-	top: 50%;
+	top: calc(50% - 8px);
 	left: 50%;
 	z-index: 5;
 	transform: translate3d(-50%, -50% ,0);
@@ -186,8 +186,8 @@ h2, .title {
 		display: inline-block;
 		cursor: pointer;
 		img {
-			width: 34px;
-			height: 33px;
+			width: 46px;
+			height: 34px;
 			object-fit: contain;
 		}
 		&_next {
@@ -290,7 +290,7 @@ h2, .title {
 		&__select {
 			background-color: #f9f9f9;
 			border-radius: 26px 0px 0px 26px;
-			padding: 16px 0 18px 0;
+			padding: 19px 0 17px;
 			border-right: 1px solid #e1e1e1;
 			/*position: relative;
 			&:after {
@@ -352,7 +352,7 @@ h2, .title {
 				width: 100%;
 				height: 100%;
 				background-color: $wh;
-				padding: 16px 45px 18px 18px;
+				padding: 18px 45px 18px 18px;
 				&::placeholder {
 					font-family: $ff;
 					font-size: 14px;
@@ -797,8 +797,11 @@ h2, .title {
 			}
 		}
 		&__photo {
+			height: 225px;
 			img {
 				width: 100%;
+				height: 100%;
+				object-fit: cover;
 				border-radius: 10px 10px 0 0;
 			}
 		}
@@ -807,7 +810,7 @@ h2, .title {
 			z-index: 10;
 		}
 		&__info {
-			padding: 20px 18px;
+			padding: 20px 18px 24px;
 			flex: 1 1 auto;
 			display: flex;
 			flex-direction: column;
@@ -816,6 +819,11 @@ h2, .title {
 		&__mark {
 			display: flex;
 			margin-bottom: 10px;
+			min-height: 16px;
+			img {
+				width: 16px;
+				height: 16px;
+			}
 			span {
 				display: inline-block;
 				font-family: $ff;
@@ -1189,6 +1197,9 @@ h2, .title {
 }
 
 @media(max-width: 1400px) {
+	.skider-arrows {
+		width: calc(100% + 40px);
+	}
 	.intro {
 		&-arrows {
 			width: calc(100% - 130px);
