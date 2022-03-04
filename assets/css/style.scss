@@ -295,11 +295,12 @@ h2, .title {
 			font-weight: 500;
 			color: $bl;
 			white-space: nowrap;
+			padding: 2px 0;
 			position: absolute;
 			top: 5px;
 			left: 0;
 			z-index: 10;
-			width: calc(100% - 36px);
+			width: calc(100% - 18px);
 			background-color: $gray2;
 			transition: all .3s linear;
 		}
