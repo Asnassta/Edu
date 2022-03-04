@@ -70,6 +70,31 @@
 	}
 }
 
+.content-page {
+	padding-bottom: 100px;
+	&__photo {
+		img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+	&__text {
+		margin-top: 45px;
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.4;
+		p {
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
 .resources {
 	&__block {
 		background-color: #f7f9fa;
@@ -232,6 +257,15 @@
 			}
 		}
 	}
+	.content-page {
+		padding-bottom: 60px;
+		&__text {
+			font-size: 16px;
+			p {
+				margin-bottom: 15px;
+			}
+		}
+	}
 	.breadcrumbs {
 		&__item {
 			font-size: 14px;
@@ -327,6 +361,15 @@
 			&__title {
 				font-size: 20px;
 				margin-right: 40px;
+			}
+		}
+	}
+	.content-page {
+		&__text {
+			margin-top: 30px;
+			font-size: 14px;
+			p {
+				margin-bottom: 10px;
 			}
 		}
 	}

@@ -57,7 +57,6 @@ $(document).ready(function() {
  $( ".choice-form__select" ).click(function() {
  
   $(this).find('label').addClass('up');
-  //$(this).find('.jqselect').addClass('opened dropdown');
  
 });
 
