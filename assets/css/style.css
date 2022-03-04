@@ -681,14 +681,14 @@ h2, .title {
 .choice-form {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -20px;
+  margin-bottom: -25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .choice-form__select {
     position: relative;
     margin-right: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;

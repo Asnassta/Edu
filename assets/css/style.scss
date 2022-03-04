@@ -278,12 +278,12 @@ h2, .title {
 
 .choice-form {
 	flex-wrap: wrap;
-	margin-bottom: -20px;
+	margin-bottom: -25px;
 	display: flex;
 	&__select {
 		position: relative;
 		margin-right: 30px;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		flex: 1 1 auto;
 		max-width: 214px;
 		&:last-child {
