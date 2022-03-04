@@ -39,6 +39,40 @@ $(document).ready(function() {
 	});
 	/*======/select=============*/
 
+  /*==========Label===========*/
+
+ $('.choice-form__select select').on('change', function() {
+ 
+ if($(this).val() == 0)
+ {
+   $(this).removeClass('active');
+ }
+ else
+ {
+   $(this).addClass('active');
+ }
+
+});
+
+ $( ".choice-form__select" ).click(function() {
+ 
+  $(this).find('label').addClass('up');
+  //$(this).find('.jqselect').addClass('opened dropdown');
+ 
+});
+
+ $( "*" ).click(function() {   
+    if($(this).find('label.up').next().hasClass('focused')  == false)
+    {
+      if($('label.up').next().find('select option:selected').val() == 0)
+      {
+        $(this).find('label').removeClass('up');
+      }
+    }
+  });
+
+ /*==========label===========*/
+
 	/*======Slider-intro=============*/
   $('.intro__slider').slick({
       infinite: true,
@@ -136,7 +170,7 @@ $(document).ready(function() {
   }).on('setPosition', function (event, slick) {
   
   h = 0;
-  par =  $('.popular__slider .slick-slide');
+  par =  $('.popular__slider .slick-slide .popular-box');
    par.each(function() {
      
      
@@ -148,7 +182,7 @@ $(document).ready(function() {
 
 });
  
-  $('.popular__slider .slick-slide').css('height', h+'px');
+  $('.popular__slider .slick-slide .popular-box').css('height', h+'px');
  
 });
   /*=============/slider-popular==============*/
