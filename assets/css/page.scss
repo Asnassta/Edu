@@ -33,6 +33,37 @@
 			}
 		}
 	}
+	&-nav {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 40px 0 0;
+		a {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 600;
+			color: $bl;
+			transition: all .2s linear;
+			margin-right: 10px;
+			margin-bottom: 5px;
+			&:last-child {
+				margin-right: 0;
+				margin-left: 8px;
+			}
+			&:hover {
+				span {
+					@include text-gradient;
+				}
+			}
+		}
+		&__btn {
+			padding: 5px 7px;
+			border-radius: 2px;
+			&.active {
+				background-color: #d9d9d9;
+			}
+		}
+	}
 }
 
 .breadcrumbs {
@@ -70,6 +101,66 @@
 	}
 }
 
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: -15px;
+	&__item {
+		margin-right: 30px;
+		margin-bottom: -15px;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.tag {
+	display: inline-block;
+	background-color: $wh;
+	border: 1px solid $gray;
+	border-radius: 17px;
+	padding: 11px 25px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 600;
+	color: $bl;
+	line-height: 1.2;
+	text-align: center;
+	transition: all .2s linear;
+	&:hover {
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.share {
+	&__description {
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: 600;
+		color: $bl;
+		line-height: 1.2;
+		margin-bottom: 15px;
+	}
+	&-social {
+		&__icon {
+			display: inline-block;
+			transition: all .2s linear;
+			margin-right: 14px;
+			&:last-child {
+				margin-right: 0;
+			}
+			img {
+				height: 16px;
+			}
+			&:hover {
+				transform: scale(1.2, 1.2);
+			}
+		}
+	}
+}
+
 .content-page {
 	padding-bottom: 100px;
 	&__photo {
@@ -94,6 +185,7 @@
 		}
 	}
 }
+
 
 .resources {
 	&__block {
@@ -313,6 +405,25 @@
 			margin-bottom: 30px;
 		}
 	}
+	.tags {
+		&__item {
+			margin-right: 15px;
+		}
+	}
+	.tag {
+		font-size: 12px;
+		padding: 11px;
+	}
+	.share {
+		&__description {
+			font-size: 14px;
+		}
+		&-social {
+			&__icon {
+				margin-right: 10px;
+			}
+		}
+	}
 	.resources {
 		&__block {
 			padding: 40px 0;
@@ -414,6 +525,12 @@
 				max-width: 100%;
 				margin-right: 0;
 				margin-bottom: 20px;
+			}
+		}
+		&-nav {
+			margin-top: 25px;
+			a {
+				font-size: 14px;
 			}
 		}
 	}

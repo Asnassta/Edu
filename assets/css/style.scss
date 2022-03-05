@@ -1,6 +1,7 @@
 @import 'fonts.scss';
 @import 'variables.scss';
 @import 'page.scss';
+@import 'list.scss';
 
 /*Reset
 ===============*/
@@ -372,6 +373,51 @@ h2, .title {
     		top: -13px;
     		color: #0084ff; 
     		}
+	}
+	&__input {
+		position: relative;
+		margin-right: 30px;
+		margin-bottom: 25px;
+		flex: 1 1 auto;
+		max-width: 214px;
+		&:last-child {
+			margin-right: 0;
+		}
+		label {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			color: $bl;
+			white-space: nowrap;
+			padding: 2px 0;
+			position: absolute;
+			top: 5px;
+			left: 0;
+			z-index: 10;
+			width: calc(100% - 18px);
+			background-color: $gray2;
+			transition: all .3s linear;
+		}
+		input {
+			width: 100%;
+			padding: 6px 18px 5px 0;
+    		background-color: $gray2;
+    		border-bottom: 2px solid $gray;
+    		font-family: $ff;
+    		font-size: 14px;
+    		font-weight: 500;
+    		color: $bl;
+			&:focus {
+				border-image: linear-gradient(90deg, #17A43B 0%, #FFCF26 98.04%) 1; 
+			}
+			&:focus+label, &.active + label  {
+				width: auto;
+    			height: auto;
+    			font-size: 12px;
+    			top: -13px;
+    			color: #0084ff;
+			}
+		}
 	}
 }
 
@@ -1771,7 +1817,7 @@ h2, .title {
 		}
 	}
 	.choice-form {
-		&__select {
+		&__select, &__input {
 			width: 100%;
 			max-width: 100%;
 			margin-right: 0;
