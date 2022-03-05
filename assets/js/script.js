@@ -33,6 +33,14 @@ $(document).ready(function() {
   });
   /*==========/like=========*/
 
+   /*======FAQ=============*/
+  
+  $(".faq__header").on("click", function() {
+    $(this).find('.faq__icon').toggleClass("active");
+    $(this).next().slideToggle(333);
+  });
+  /*==========/FAQ=========*/
+
 	/*======Select=============*/
 	$(function() {
 		$('select').styler();
