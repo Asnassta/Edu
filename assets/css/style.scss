@@ -1906,6 +1906,9 @@ h6.title {
 }
 
 @media(max-width: 375px) {
+	h4.title {
+		font-size: 16px;
+	}
 	.header {
 		&-menu {
 			&__buttons {

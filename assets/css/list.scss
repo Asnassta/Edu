@@ -235,6 +235,72 @@
  	}
 }
 
+.video-list {
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-bottom: -30px;
+		>* {
+			width: calc(50% - 30px);
+			margin-left: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	&-box {
+		display: block;
+		background-color: $wh;
+		border: 1px solid $gray;
+		border-top: none;
+		border-radius: 10px;
+		transition: all .1s linear;
+		&:hover {
+			.video-list-box__photo {
+				&:after {
+					transform: translate3d(-50%, -50%, 0) scale(1.2, 1.2);
+				}
+			}
+		}
+		&__photo {
+			margin: 0 -1px;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				border-radius: 10px;
+			}
+			&:after {
+				content: "";
+				width: 48px;
+				height: 48px;
+				background: url("../images/play-circle.svg");
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: 5;
+				transform: translate3d(-50%, -50%, 0);
+				transition: all .3s linear;
+			}
+		}
+		&__title {
+			padding: 25px 24px 30px;
+			border-bottom: 1px solid $gray;
+			border-radius: 10px;
+			background-color: $wh;
+			span {
+				display: inline-block;
+				font-family: $ff;
+				font-size: 18px;
+				font-weight: 600;
+				color: $bl;
+				line-height: 1.2;
+				transition: all .2s linear;
+			}
+		}
+	}
+}
+
 /*==========Adaptive==========*/
 @media(max-width: 1240px) {
 	.news {
@@ -349,6 +415,25 @@
 			}
 		}
 	}
+	.video-list {
+		&__content {
+			margin-left: -20px;
+			margin-bottom: -20px;
+			>* {
+				width: calc(50% - 20px);
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+		}
+		&-box {
+			&__title {
+				padding: 18px;
+				span {
+					font-size: 16px;
+				}
+			}
+		}	
+	}
 }
 
 @media(max-width: 540px) {
@@ -376,6 +461,15 @@
 			}
 		}
 	}
+	.video-list {
+		&__content {
+			margin-left: 0;
+			>* {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 @media(max-width: 414px) {
@@ -387,6 +481,15 @@
 			}
 			&__data {
 				font-size: 12px;
+			}
+		}
+	}
+	.video-list {
+		&-box {
+			&__title {
+				span {
+					font-size: 14px;
+				}
 			}
 		}
 	}
