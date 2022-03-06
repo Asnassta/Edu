@@ -60,10 +60,59 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	overflow: hidden;
 }
 
+h1.title {
+	font-family: $ff;
+	font-size: 52px;
+	font-weight: 600;
+	color: $bl;
+	span {
+		@include text-gradient;
+	}
+}
 
-h2, .title {
+h2.title {
 	font-family: $ff;
 	font-size: 42px;
+	font-weight: 600;
+	color: $bl;
+	span {
+		@include text-gradient;
+	}
+}
+
+h3.title {
+	font-family: $ff;
+	font-size: 36px;
+	font-weight: 600;
+	color: $bl;
+	span {
+		@include text-gradient;
+	}
+}
+
+h4.title {
+	font-family: $ff;
+	font-size: 28px;
+	font-weight: 600;
+	color: $bl;
+	span {
+		@include text-gradient;
+	}
+}
+
+h5.title {
+	font-family: $ff;
+	font-size: 24px;
+	font-weight: 600;
+	color: $bl;
+	span {
+		@include text-gradient;
+	}
+}
+
+h6.title {
+	font-family: $ff;
+	font-size: 20px;
 	font-weight: 600;
 	color: $bl;
 	span {
@@ -1543,8 +1592,11 @@ h2, .title {
 }
 
 @media(max-width: 860px) {
-	h2, .title {
+	h2.title {
 		font-size: 35px;
+	}
+	h4.title {
+		font-size: 20px;
 	}
 	.title-big {
 		font-size: 35px;
@@ -1725,8 +1777,11 @@ h2, .title {
 	}
 }
 @media(max-width: 540px) {
-	h2, .title {
+	h2.title {
 		font-size: 25px;
+	}
+	h4.title {
+		font-size: 18px;
 	}
 	.title-big {
 		font-size: 25px;
