@@ -242,10 +242,11 @@ function resizeInstance(instance){
   resizeGridItem(item);
 }
 
-window.onload = resizeAllGridItems();
+resizeAllGridItems();
 window.addEventListener("resize", resizeAllGridItems);
 	
 });
 
 
 
+window.onload = resizeAllGridItems();
