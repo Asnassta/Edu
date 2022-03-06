@@ -222,6 +222,18 @@ $( ".choice-form__select label" ).click(function() {
   /*=============/slider-popular==============*/
 
 
+
+
+resizeAllGridItems();
+window.addEventListener("resize", resizeAllGridItems);
+	
+});
+
+function resizeInstance(instance){
+  item = instance.elements[0];
+  resizeGridItem(item);
+}
+
   function resizeGridItem(item){
   grid = document.getElementsByClassName("photogallery__box")[0];
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
@@ -237,16 +249,8 @@ function resizeAllGridItems(){
   }
 }
 
-function resizeInstance(instance){
-  item = instance.elements[0];
-  resizeGridItem(item);
-}
 
-resizeAllGridItems();
-window.addEventListener("resize", resizeAllGridItems);
-	
+$(window).on('load', function(){
+  resizeAllGridItems();
 });
-
-
-
-window.onload = resizeAllGridItems();
+ 
